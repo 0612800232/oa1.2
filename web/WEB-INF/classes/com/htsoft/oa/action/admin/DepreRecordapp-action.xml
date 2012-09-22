@@ -1,0 +1,1 @@
+ <bean id="DepreRecordAction" class="com.htsoft.oa.action.admin.DepreRecordAction" scope="prototype"/>

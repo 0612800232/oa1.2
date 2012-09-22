@@ -1,0 +1,1 @@
+ <bean id="WorkPlanAction" class="com.htsoft.oa.action.task.WorkPlanAction" scope="prototype"/>

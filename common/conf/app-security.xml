@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:b="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd">	
+    <http auto-config="true" access-denied-page="/403.jsp" lowercase-comparisons="true" >
+
+        <intercept-url pattern="/images/**" filters="none"/>
+        <intercept-url pattern="/css/**" filters="none"/>
+        <intercept-url pattern="/js/**" filters="none"/>
+        <intercept-url pattern="/403*" filters="none"/>
+        <intercept-url pattern="/404*" filters="none"/>
+        <intercept-url pattern="/500*" filters="none"/> 
+        <intercept-url pattern="/ext3/**" filters="none"/>
+        <intercept-url pattern="/fckeditor/**" filters="none"/>  
+        <intercept-url pattern="/jsonStruts**" filters="none"/>
+        <intercept-url pattern="/file-upload" access="ROLE_PUBLIC,ROLE_ANONYMOUS"/>
+        <intercept-url pattern="/fileDetail.do" access="ROLE_PUBLIC"/> 
+        <intercept-url pattern="/index.jsp" access="ROLE_PUBLIC"/>        
+        <intercept-url pattern="/login.do**" access="ROLE_PUBLIC,ROLE_ANONYMOUS"/>
+  		<intercept-url pattern="/check.do**" access="ROLE_PUBLIC,ROLE_ANONYMOUS"/>  		
+        <intercept-url pattern="/**" access="ROLE_PUBLIC"/>
+        <!-- 
+        <intercept-url pattern="/dwr/**" access="ROLE_PUBLIC"/>
+        <intercept-url pattern="/system/goLogin.do*" access="ROLE_PUBLIC"/>
+        <intercept-url pattern="/**" access="ROLE_ADMIN"/>
+         -->
+         
+        <!-- 
+        <intercept-url pattern="/admin/**" access="ROLE_ADMIN"/>
+         -->
+        <!-- 
+        <intercept-url pattern="/admin/system/listRole.do*" access="ROLE_USER"/>
+        <intercept-url pattern="/admin/main.do*" access="ROLE_PUBLIC"/>
+         -->
+
+        
+        <form-login default-target-url="/index.jsp" login-page="/login.jsp" authentication-failure-url="/403.jsp" login-processing-url="/j_security_check" />
+  
+        <logout logout-url="/j_logout.do" logout-success-url="/login.jsp"/> 
+   		
+   		<remember-me key="RememberAppUser"/>
+    </http>
+	
+	<authentication-manager alias="authenticationManager"/>
+		
+    <authentication-provider user-service-ref="appUserDao"/>
+<!-- 
+    <b:bean id="securityInterceptorFilter" class="com.ht.web.filter.SecurityInterceptorFilter" >
+		<custom-filter after="FILTER_SECURITY_INTERCEPTOR" />
+		<b:property name="definitionSource" ref="definitionSource"></b:property>
+	</b:bean>
+	<b:bean id="definitionSource" class="com.ht.security.SecurityInterceptorDefinitionSource">
+		<b:property name="appResourceDao" ref="appResourceDao"/>
+	</b:bean>
+ -->
+</b:beans>

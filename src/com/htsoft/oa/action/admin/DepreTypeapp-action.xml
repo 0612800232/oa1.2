@@ -1,0 +1,1 @@
+ <bean id="DepreTypeAction" class="com.htsoft.oa.action.admin.DepreTypeAction" scope="prototype"/>

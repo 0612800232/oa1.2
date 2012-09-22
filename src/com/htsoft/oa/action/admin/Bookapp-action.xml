@@ -1,0 +1,1 @@
+ <bean id="BookAction" class="com.htsoft.oa.action.admin.BookAction" scope="prototype"/>

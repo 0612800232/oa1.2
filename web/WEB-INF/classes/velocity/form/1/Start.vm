@@ -1,0 +1,176 @@
+##生成开始出差申请表单，基于ExtjsUI方式####
+[{
+	layout : 'column',
+	margins : '0',
+	labelHeight: 40,
+	items : [{
+				columnWidth : .5,
+				layout : 'form',
+				items : [{
+					xtype : 'textfield',
+					fieldLabel : '出差目的',
+					width : 300,
+					name : 'aim',
+					allowBlank:false,
+					value : ''
+				}]
+			}, {
+				columnWidth : .5,
+				layout : 'form',
+				items : [{
+					xtype : 'datefield',
+					fieldLabel : '申请日期',
+					format : 'Y-m-d',
+					allowBlank:false,
+					name : 'applyDate',
+					value : ''
+				}]
+			}]
+},
+{
+	xtype : 'fieldset',
+	title : '出差人员信息',
+	autoHeight : true,
+	layout : 'column',
+	items : [{
+				columnWidth : .5,
+				layout : 'form',
+				items : [{
+							xtype : 'textfield',
+							fieldLabel : '姓名',
+							width : 300,
+							name : 'fullname',
+							value : '${curUser.fullname}'
+						}, {
+							fieldLabel : '手机',
+							xtype : 'textfield',
+							width : 300,
+							name : 'mobile',
+							value : '${curUser.mobile}'
+						}]
+			}, {
+				columnWidth : .5,
+				layout : 'form',
+				items : [{
+							fieldLabel : '邮箱',
+							width : 300,
+							xtype : 'textfield',
+							name : 'email',
+							vtype : 'email',
+							value : '${curUser.email}'
+						}]
+			}]
+},
+{
+	xtype : 'fieldset',
+	title : '行程',
+	collapsible : true,
+	layout : 'column',
+	autoHeight : true,
+	items : [ 
+			{
+				columnWidth : .5,
+				margins : '0',
+				layout : 'form',
+				items : [{
+							xtype : 'textfield',
+							fieldLabel : '出发地',
+							width : 200,
+							name:'startLocation'
+						}, {
+							layout : 'column',
+							items : [
+								 	{
+										columnWidth : .5,
+										layout : 'form',
+										items : [{
+											xtype : 'datefield',
+											fieldLabel : '启程日期',
+											format : 'Y-m-d',
+											name:'startDate'
+										}]
+									},{
+										columnWidth:.5,
+										layout:'form',
+										items:[{
+											name : 'startTime',
+											fieldLabel : '启程时间',
+											width : 80,
+											xtype:'textfield'
+										}]
+									}
+									]
+						}, {
+							xtype : 'fieldset',
+							border : false,
+							checkboxToggle : true,
+							title : '添加返回日期',
+							layout : 'column',
+							autoHeight : true,
+							margins : '0 0 0 0',
+							collapsed : true,
+							items : [
+								{
+										columnWidth : .5,
+										layout : 'form',
+										items : [{
+											fieldLabel : '返回日期',
+											xtype : 'datefield',
+											format : 'Y-m-d',
+											name:'returnDate'
+										}]
+									}, {
+										columnWidth : .5,
+										layout : 'form',
+										items : [new Ext.form.TextField(
+												{
+													fieldLabel : '返回时间',
+													name : 'returnTime',
+													width : 80,
+													minValue : '8:00am',
+													maxValue : '6:00pm'
+												})]
+									}
+									]
+						}]
+			},
+			{
+				columnWidth : .5,
+				layout : 'form',
+				items : [{
+							xtype : 'textfield',
+							fieldLabel : '目的地',
+							width : 200,
+							name:'destLocation',
+							value:'${destLocation}'
+						}, {
+							xtype : 'checkbox',
+							fieldLabel : '包括旅馆',
+							name : 'includeHotel',
+							value:1
+						}, {
+							xtype : 'checkbox',
+							fieldLabel : '包括汽车租赁',
+							name : 'includeHireCar',
+							value:1
+						},
+						{
+							xtype : 'checkbox',
+							fieldLabel : '需要借款',
+							name : 'needLoanMoney',
+							value:1
+						}
+						]
+			}]
+},{
+	xtype : 'fieldset',
+	layout : 'column',
+	margins : '0 0 0 0',
+	title : '备注',
+	items : {
+		columnWidth : .90,
+		xtype : 'textarea',
+		name : 'note'
+	}
+}
+]

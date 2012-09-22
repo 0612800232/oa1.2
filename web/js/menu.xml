@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Menus>
+	<!-- 
+	<Items id="destop" text="我的办公桌面"  iconCls="menu-destop">
+		<Item id="DiaryView" iconCls="menu-diary" text="我的日志"/>
+		<Item id="MessageView" iconCls="menu-message" text="我的消息"/>
+		<Item id="PersonalMailBoxView" iconCls="menu-mail_box" text="我的邮件"/>
+		<Item id="MyWaintTask" iconCls="" text="我的待办事项"/>
+		<Item id="MyTask" iconCls="" text="我的任务"/>
+		<Item id="MyPlan" iconCls="" text="我的计划"/>
+		<Item id="AppointmentView" iconCls="menu-appointment" text="我的约会"/>
+	</Items>
+	-->
+	<Items id="SystemSetting" text="系统设置" iconCls="menu-system">
+		<Item id="AppUserView" iconCls="menu-appuser" text="员工管理"/>
+		<Item id="AppRoleView" iconCls="menu-role" text="角色设置"/>
+		<Item id="DepartmentView" iconCls="menu-department" text="部门管理"/>
+		<Item id="FileAttachView" iconCls="menu-attachment" text="附件管理"/>
+		<Item id="CompanyView" iconCls="menu-company" text="公司信息管理"/>
+		<Item id="ReportTemplateView" iconCls="menu-report" text="报表管理"/>
+	</Items>
+	<Items id="Info" text="信息管理" iconCls="menu-info">
+		<Item id="NewsView" iconCls="menu-news" text="新闻管理"/>
+		<Item id="NewsTypeView" iconCls="menu-news_type" text="新闻类别"/>
+		<Item id="NoticeView" iconCls="menu-notice" text="公告管理"/>
+	</Items>
+	<Items id="Communication" text="通讯管理" iconCls="menu-communicate">
+	    <Items id="PhoneBook" iconCls="menu-phonebook" text="通讯簿">
+	    	<Item id="PersonalPhoneBookView" iconCls="menu-personal-phoneBook" text="个人通讯簿"></Item>
+	    	<Item id="SharedPhoneBookView" iconCls="menu-phonebook-shared" text="共享通讯录"></Item>	    	 
+	    </Items>
+		<Items id="InnerMail" text="内部邮件" iconCls="menu-mail">
+			<Items id="MailForm" iconCls="menu-mail_send" text="新建邮件"></Items>
+			<Items id="PersonalMailBoxView" iconCls="menu-mail_box" text="个人邮箱"></Items>
+		</Items>
+		<Item id="MessageView" iconCls="menu-message" text="内部信息"/>
+		<!--  
+		<Item iconCls="" text="手机短信"></Item>
+		<Item text="所有邮件"></Item>
+		<Item text="邮件查询"></Item>-->
+	</Items>
+	<Items id="Document" text="文档管理" iconCls="menu-document">		
+		<Item id="PersonalDocumentView" iconCls="menu-personal-doc" text="个人文档"></Item>
+        <Item id="DocumentSharedView" iconCls="menu-folder-shared" text="共享文档"></Item>
+		<Item id="DocFolderMoveForm" iconCls="menu-folder-go" text="文件夹转移"></Item>
+		<Items id="PublicDocument" iconCls="menu-folder" text="公共文档">
+			<Item id="NewPublicDocumentForm" iconCls="menu-new-document" text="新建公共文档"></Item>
+			<Item id="FindPublicDocumentView" iconCls="menu-find-doc" text="查看公共文档"></Item>
+			<Item id="DocFolderSharedView" iconCls="menu-public-fol" text="公共文件夹"></Item>
+		</Items>
+	</Items>
+
+	<Items id="Task" text="任务管理" iconCls="menu-task">
+		<Item id="AppointmentView" text="我的约会" iconCls="menu-appointment"/>
+		<Item id="MyPlanTaskView" text="今日常务" iconCls="menu-cal-plan"/>
+		<!-- 
+		<Item id="" text="新建日程"></Item>
+		 -->
+		<Item id="CalendarPlanView" text="日程管理" iconCls="menu-cal-plan-view"/>
+		<Item id="DiaryView" text="工作日志" iconCls="menu-diary"/>
+		<Items text="任务计划">
+			<Item id="PlanTypeView" text="任务计划类型"/>
+			<Item id="WorkPlanView" text="计划管理"/>
+			<Item text="新建任务计划"></Item>
+			<Item text="我的计划"></Item>
+		</Items>
+	</Items>
+	<Items  id="customer" text="客户管理" iconCls="menu-customer">
+		<Item id="CustomerView" text="客户信息管理" iconCls="menu-customerView"></Item>
+		<Item id="CusLinkmanView" text="联系人信息管理" iconCls="menu-cusLinkman"></Item>
+		<Item id="CusConnectionView" text="交往信息管理" iconCls="menu-connection"></Item>
+		<Item id="ProjectView" text="项目管理" iconCls="menu-project"></Item>
+		<Items id="ContractView" text="合同管理" iconCls="menu-contract"></Items>
+		<Item text="产品信息管理"></Item>
+		<Item text="供应商信息管理"></Item>
+		<Item text="销售管理"></Item>
+	</Items>
+	<Items id="Administrator" text="行政管理" iconCls="menu-administrator">
+		<Items id="GoodManeger" iconCls="menu-goods" text="办公用品管理">
+		   <Item id="OfficeGoodsManageView" iconCls="menu-goods" text="办公用品管理"></Item>
+		   <Item id="InStockView" iconCls="menu-instock" text="办公用品入库管理"></Item>
+		   <Item id="GoodsApplyView" iconCls="menu-goods-apply" text="办公用品申请"></Item>
+		</Items>
+		<Items id="CarManeger" iconCls="menu-car" text="车辆使用管理">
+		   <Item id="CarView" iconCls="menu-car" text="车辆管理"></Item>
+		   <Item id="CartRepairView" iconCls="menu-car_repair" text="车辆维修管理"></Item>
+		   <Item id="CarApplyView" iconCls="menu-car_apply" text="车辆申请管理"></Item>
+		</Items>
+		<Items text="固定资产管理" iconCls="menu-assets">
+		   <Item id="DepreTypeView" iconCls="menu-depre-type" text="折旧类型管理"></Item>
+		   <Item id="FixedAssetsManageView" iconCls="menu-assets" text="固定资产管理"></Item>
+		   <Item id="DepreRecordView" text="固定资产折旧记录管理"></Item>
+		</Items>
+		<Items id="BookManager" iconCls="menu-book" text="图书管理">
+			<Item id="BookTypeView" iconCls="menu-book-type" text="图书类别管理"></Item>
+			<Item id="BookManageView" iconCls="menu-book-manage" text="图书管理"></Item>
+			<Item id="BookBorrowView" iconCls="menu-book-borrow" text="图书借阅管理"></Item>
+			<Item id="BookReturnView" iconCls="menu-book-return" text="图书归还管理"></Item>
+		</Items>
+	</Items>
+	<Items id="Flow" text="流程管理" iconCls="menu-flow">
+		<Item id="FlowManagerView" text="流程管理"/>
+		<Item id="NewProcess" text="新建流程"></Item>
+		<Item id="ProcessRunView" text="我的申请流程"/>
+		<Item id="MyTaskView" text="待办事项"></Item>
+		<Item text="已办结流程"></Item>
+	</Items>
+</Menus>

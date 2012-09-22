@@ -1,0 +1,1 @@
+ <bean id="FixedAssetsAction" class="com.htsoft.oa.action.admin.FixedAssetsAction" scope="prototype"/>
